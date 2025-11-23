@@ -40,8 +40,9 @@ import movie_recommender from "./tech/movieRecommendation.png";
 import emailspam from "./emailspam.png";
 import banking_system from "./payment-system-design.webp";
 import rocket from "./rocket.png";
-
+import gowthami from "./Gowthami.jpeg"
 export {
+  gowthami,
   banking_system,
   emailspam,
   movie_recommender,

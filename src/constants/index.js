@@ -33,6 +33,7 @@ import {
   emailspam,
   banking_system,
   rocket,
+  gowthami
 } from "../assets";
 
 export const navLinks = [
@@ -139,8 +140,7 @@ const testimonials = [
     name: "Gowthami konakanchi",
     designation: "Developer at SAP Labs on S/4 HANA",
     company: "SAP LABS India",
-    image:
-      "src/assets/Gowthami.jpeg",
+    image: gowthami,
   },
 ];
 
