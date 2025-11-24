@@ -16,7 +16,7 @@ const About = () => {
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
+        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] font-bold text-white"
       >
         Hi, I’m Mohit Naskar, an AI/ML Developer from India passionate about
         creating user-friendly, intelligent applications. I work with Python,

@@ -1,5 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
 import {
+  CustomCursor,
   About,
   Contact,
   Experience,
@@ -17,6 +18,7 @@ const App = () => {
     <BrowserRouter>
       <div className="relative z-0 bg-primary">
         <div className="relative z-0">
+          <CustomCursor />
           <Navbar />
           <Hero />
           <About />

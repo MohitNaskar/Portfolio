@@ -41,7 +41,13 @@ import emailspam from "./emailspam.png";
 import banking_system from "./payment-system-design.webp";
 import rocket from "./rocket.png";
 import gowthami from "./Gowthami.jpeg"
+import avator from "./avator.png"
+import linkedin from "./linkedin.png"
+import leetcode from "./leetcode.png"
 export {
+  linkedin,
+  leetcode,
+  avator,
   gowthami,
   banking_system,
   emailspam,

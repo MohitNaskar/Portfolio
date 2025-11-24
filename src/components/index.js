@@ -8,6 +8,7 @@ import Works from './Works';
 import Feedbacks from './Feedbacks';
 import Contact from './Contact';
 import Footer from './Footer';
+import CustomCursor from './CustomCursor';
 
 export {
   Hero,
@@ -18,6 +19,7 @@ export {
   Works,
   Feedbacks,
   Contact,
+  CustomCursor,
   EarthCanvas, 
   BallCanvas, 
   ComputersCanvas, 

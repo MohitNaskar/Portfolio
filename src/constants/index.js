@@ -33,8 +33,23 @@ import {
   emailspam,
   banking_system,
   rocket,
-  gowthami
+  gowthami,
+  linkedin,
+  leetcode,
 } from "../assets";
+
+export const hero = [
+  {
+  title: "linkedIn",
+  img : linkedin,
+  link: "https://www.linkedin.com/in/mohit-naskar-a595201a6/",
+  },
+  {
+  title: "LeetCode",
+  img : leetcode,
+  link: "https://leetcode.com/u/Mohit_Naskar/",
+  }
+]
 
 export const navLinks = [
   {
