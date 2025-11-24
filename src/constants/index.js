@@ -81,11 +81,11 @@ const technologies = [
   { name: "Python", icon: python }, //
   { name: "Data Analysis", icon: pandas }, //
   { name: "NumPy", icon: numpy }, //
-  { name: "Sklearn", icon: sklearn }, //
+  // { name: "Sklearn", icon: sklearn }, //
   { name: "GenAI", icon: genai }, //
   { name: "Machine Learning", icon: ml }, //
   { name: "NLP", icon: nlp }, //
-  { name: "BERT Embeddings", icon: bert }, //
+  // { name: "BERT Embeddings", icon: bert }, //
 
   // Tools
   { name: "Git", icon: git }, //
