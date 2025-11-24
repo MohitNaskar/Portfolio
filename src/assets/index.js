@@ -10,7 +10,7 @@ import close from "./close.svg";
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
 import figma from "./tech/figma.png";
-import git from "./tech/git.png";
+import git from "./tech/git.png"; //
 import html from "./tech/html.png";
 import javascript from "./tech/javascript.png";
 import nodejs from "./tech/nodejs.png";
@@ -21,12 +21,12 @@ import threejs from "./tech/threejs.svg";
 import bert from "./tech/BERT.png";
 import python from "./tech/python.png";
 import pandas from "./tech/pandas.png";
-import numpy from "./tech/numpy.png";
+import numpy from "./tech/numpy.png"; //
 import sklearn from "./tech/sklearn.png";
-import genai from "./tech/GENAI.png";
-import nlp from "./tech/NLP.png";
+import genai from "./tech/GENAI.png"; //
+import nlp from "./tech/NLP.png";//
 import streamlit from "./tech/Streamlit.png";
-import ml from "./tech/ML.png";
+import ml from "./tech/ML.png"; //
 import vite from "./tech/vite.png";
 import sql from "./tech/sql.png";
 
