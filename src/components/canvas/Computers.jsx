@@ -4,7 +4,7 @@ import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 import CanvasLoader from '../Loader';
 
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF('/blackhole/scene.glb');
+  const computer = useGLTF('/blackhole/space/scene.gltf');
   
   
   return (
@@ -29,7 +29,7 @@ const Computers = ({ isMobile }) => {
   );
 };
 // Preload the model before component mounts
-useGLTF.preload('/blackhole/scene.glb');
+useGLTF.preload('/blackhole/space/scene.gltf');
 
 const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
