@@ -34,7 +34,6 @@ const BallCanvas = ({ icon }) => {
     <Canvas
       frameloop='demand'
       gl={{ preserveDrawingBuffer: false }}
-      camera={{ position:[4,4,6],fov:40 }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
