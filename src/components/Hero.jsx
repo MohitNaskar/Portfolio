@@ -37,7 +37,7 @@ const Hero = () => {
       </div>
       
       <div className="absolute inset-0 top-20 flex justify-center items-center -z-10 pt-30">
-        <img src={avator} alt="avator" className="w-[750px] opacity-60 object-contain"/>
+        <img src={avator} alt="avator" className="w-[750px] opacity-60 object-contain" loading="lazy"/>
       </div>
       
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
