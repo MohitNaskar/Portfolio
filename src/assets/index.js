@@ -17,7 +17,7 @@ import sklearn from "./tech/sklearn.png";
 import mcp from "./tech/mcp.png";
 import agentic from "./tech/agentic.png";
 import ds from "./tech/ds.png";
-import mlwb from "./tech/mlwb.png";
+import mlwb from "./mlwb.png";
 
 import sap from "./company/sap.jpeg";
 import ineuron from "./company/ineuron_ai_.jpeg"
