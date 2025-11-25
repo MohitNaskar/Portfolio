@@ -61,18 +61,13 @@ const services = [
 ];
 
 const technologies = [
-
-  // Databases
   { name: "MySQL", icon: sql }, //
-  // AI / ML
   { name: "Python", icon: python }, //
   { name: "Data Analysis", icon: pandas }, //
   { name: "NumPy", icon: numpy }, //
   { name: "GenAI", icon: genai }, //
   { name: "Machine Learning", icon: ml }, //
   { name: "NLP", icon: nlp }, //
-
-  // Tools
   { name: "Git", icon: git }, //
   { name: "Docker", icon: docker }, //
 ];
