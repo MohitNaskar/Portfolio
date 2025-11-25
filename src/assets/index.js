@@ -1,8 +1,4 @@
 import logo from "./logo.svg";
-import backend from "./backend.png";
-import creator from "./creator.png";
-import mobile from "./mobile.png";
-import web from "./web.png";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
@@ -16,6 +12,12 @@ import genai from "./tech/GENAI.png"; //
 import nlp from "./tech/NLP.png";//
 import ml from "./tech/ML.png"; //
 import sql from "./tech/sql.png";
+import react from "./tech/react.png";
+import sklearn from "./tech/sklearn.png";
+import mcp from "./tech/mcp.png";
+import agentic from "./tech/agentic.png";
+import ds from "./tech/ds.png";
+import mlwb from "./tech/mlwb.png";
 
 import sap from "./company/sap.jpeg";
 import ineuron from "./company/ineuron_ai_.jpeg"
@@ -29,7 +31,12 @@ import gowthami from "./Gowthami.jpeg"
 import avator from "./avator.png"
 import linkedin from "./linkedin.png"
 import leetcode from "./leetcode.png"
+
 export {
+  mlwb,
+  agentic,
+  react,
+  sklearn,
   linkedin,
   leetcode,
   avator,
@@ -45,10 +52,6 @@ export {
   ml,
   sql,
   logo,
-  backend,
-  creator,
-  mobile,
-  web,
   github,
   menu,
   close,
@@ -57,4 +60,6 @@ export {
   sap,
   ineuron,
   rocket,
+  mcp,
+  ds,
 };

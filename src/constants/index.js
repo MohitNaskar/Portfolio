@@ -7,8 +7,6 @@ import {
   nlp,  
   ml,
   sql,
-  backend,
-  web,
   docker,
   git,
   sap,
@@ -19,6 +17,12 @@ import {
   gowthami,
   linkedin,
   leetcode,
+  react,
+  sklearn,
+  mcp,
+  agentic,
+  ds,
+  mlwb
 } from "../assets";
 
 export const hero = [
@@ -52,22 +56,26 @@ export const navLinks = [
 const services = [
   {
     title: "AI/ML Engineer",
-    icon: web,
+    icon: mlwb,
   },
   {
     title: "Data Scientist",
-    icon: backend,
+    icon: ds,
   }
 ];
 
 const technologies = [
+  { name: "React JS", icon: react }, //
   { name: "MySQL", icon: sql }, //
   { name: "Python", icon: python }, //
   { name: "Data Analysis", icon: pandas }, //
   { name: "NumPy", icon: numpy }, //
   { name: "GenAI", icon: genai }, //
+  { name: "MCP", icon: mcp }, //
+  { name: "Agentic AI", icon: agentic }, //
   { name: "Machine Learning", icon: ml }, //
   { name: "NLP", icon: nlp }, //
+  { name: "Scikit-Learn", icon: sklearn }, //
   { name: "Git", icon: git }, //
   { name: "Docker", icon: docker }, //
 ];
