@@ -1,35 +1,21 @@
 import { image, li } from "framer-motion/client";
 import {
-  bert,
   python,
   pandas,
   numpy,
-  sklearn,
   genai,
   nlp,  
-  streamlit,
   ml,
   sql,
-  logo,
   backend,
-  creator,
-  mobile,
   web,
-  github,
-  menu,
-  close,
   docker,
-  figma,
   git,
-  javascript,
-  nodejs,
-  react,
   sap,
   ineuron,
   movie_recommender,
   emailspam,
   banking_system,
-  rocket,
   gowthami,
   linkedin,
   leetcode,
@@ -65,27 +51,16 @@ export const navLinks = [
 
 const services = [
   {
-    title: "ML Engineer",
+    title: "AI/ML Engineer",
     icon: web,
-  },
-  {
-    title: "AI Developer",
-    icon: mobile,
   },
   {
     title: "Data Scientist",
     icon: backend,
-  },
-  {
-    title: "Full Stack Developer",
-    icon: creator,
-  },
+  }
 ];
 
 const technologies = [
-  { name: "React JS", icon: react },
-
-  { name: "Node JS", icon: nodejs }, //
 
   // Databases
   { name: "MySQL", icon: sql }, //
@@ -93,11 +68,9 @@ const technologies = [
   { name: "Python", icon: python }, //
   { name: "Data Analysis", icon: pandas }, //
   { name: "NumPy", icon: numpy }, //
-  // { name: "Sklearn", icon: sklearn }, //
   { name: "GenAI", icon: genai }, //
   { name: "Machine Learning", icon: ml }, //
   { name: "NLP", icon: nlp }, //
-  // { name: "BERT Embeddings", icon: bert }, //
 
   // Tools
   { name: "Git", icon: git }, //
