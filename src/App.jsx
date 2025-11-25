@@ -16,7 +16,7 @@ import {
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="relative z-0 bg-primary">
+      <div className="relative z-0 bg-primary snap-y snap-mandatory h-screen overflow-scroll">
         <div className="relative z-0">
           <CustomCursor />
           <Navbar />
