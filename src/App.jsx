@@ -16,9 +16,12 @@ import {
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="relative z-0 bg-primary snap-y snap-mandatory h-screen overflow-scroll">
+      <div className="relative z-0 bg-primary h-screen overflow-y-scroll overflow-x-hidden smooth-scroll">
         <div className="relative z-0">
           <CustomCursor />
+          <div className="fixed inset-0 -z-10">
+            <StarsCanvas />
+          </div>
           <Navbar />
           <Hero />
           <About />
@@ -27,10 +30,8 @@ const App = () => {
           <Works />
           <Feedbacks />
           <Contact />
-          <StarsCanvas />
           <Footer />
         </div>
-        
       </div>
     </BrowserRouter>
   );
