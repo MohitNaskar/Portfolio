@@ -25,7 +25,7 @@ const About = () => {
         practices.
         <br></br>
         <br></br>
-        I’m a fast learner currently expanding my skills in React, flask,
+        A learner currently expanding my skills in React, flask,
         Docker, backend systems, and full-stack development to build richer,
         more interactive experiences. When I’m not upskilling or experimenting
         with new tech, you’ll find me on the field, scoring my next goal in a

@@ -13,7 +13,7 @@ const Footer = () => {
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <img src={logo} alt="logo" className="w-7 h-7 object-contain" />
         <p className="text-white text-[16px] cursor-pointer flex font-bold">
-          © 2025 Mohit Naskar&nbsp;
+          © 2026 Mohit Naskar&nbsp;
           <span>&nbsp;All Rights Reserved. </span>
         </p>
       </div>

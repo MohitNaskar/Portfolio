@@ -88,10 +88,10 @@ const experiences = [
     iconBg: "#383E56",
     date: "May 2025 - Present",
     points: [
-      "Building a topic modelling solution to analyze customer feedback data using NLP techniques to extract insights.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Understanding and implementing AI/ML algorithms and models to solve supplier-related challenges.",
-      "Analyzing large datasets to extract meaningful insights and patterns that can inform decision-making processes for the businesses.",
+      "Building a topic modelling solution to analyze customer feedback data using NLP techniques to extract insights.Which increased the topic accuracy by 95% based on the description and other data provided by the customer.",
+      "Collaborating with cross-functional teams including designers, product managers, and other developers to understand the core issue which has to be solved.",
+      "Understanding and implementing AI/ML algorithms and models to solve supplier-related challenges.This included traditional models and newer methods including GEN AI and Agentic AI which can resolve the issues upto 93%.",
+      "Analyzing large datasets to extract meaningful insights and patterns that can inform decision-making processes for the businesses and improve the accuracy of the models that will be suggested or build.",
     ],
   },
   {
@@ -101,10 +101,10 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "Aug 2024 - May 2025",
     points: [
-      "Automated business scenarios using joule AI platform to improve efficiency and reduce manual effort.",
-      "Understanding Business AI and it's implementation in various SAP modules.",
-      "Build a keras chatbot model to assist users with common queries related to SAP products and services.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Automated business scenarios using joule AI platform to improve efficiency and reduce manual effort.This included navigational and transactional capabilities which can be build within the Joule AI which is specific to SAP AI.",
+      "Understanding Business AI, its uses and it's implementation in various SAP modules. This opens up oppurtunities to understand the requirements of the user and using the proper tools along with the logic.",
+      "Build a keras chatbot model to assist the new joiner with common queries related to SAP products and services.The model had an accuracy score of 91% on a 0.05 learning rate.",
+      "Participating in code reviews and providing constructive feedback to other developers.This expanded by git knowledge",
     ],
   },
   {
@@ -114,8 +114,8 @@ const experiences = [
     iconBg: "#383E56",
     date: "Jun 2023 - July 2023",
     points: [
-      "Handled mussing data using various imputation techniques to ensure data quality for analysis.",
-      "Used Regression and Classification algorithms to build predictive models for different datasets.",
+      "Handled missing data using various imputation techniques to ensure data quality for analysis. Had a success rate of 98%.",
+      "Used Regression and Classification algorithms to build predictive models for different datasets. This was for building POC for customers.",
       "Image classification using Convolutional Neural Networks (CNNs) to accurately categorize images into predefined classes.",
     ],
   },
@@ -129,6 +129,7 @@ const testimonials = [
     designation: "Developer at SAP Labs on S/4 HANA",
     company: "SAP LABS India",
     image: gowthami,
+    testimonial_link:"https://www.linkedin.com/in/mohit-naskar-a595201a6/",
   },
 ];
 

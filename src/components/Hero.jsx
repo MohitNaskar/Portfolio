@@ -19,27 +19,46 @@ const Hero = () => {
             Hi, I'm <span className="text-[#915eff]">Mohit</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100 w-80`}>
-            I am an <span className="text-[#ffffff]">Artificial Intelligence,
-              <br className="sm:block hidden"/> Machine Learning Engineer who is passionate about creating user-friendly, intelligent applications.</span>
+            I am an{" "}
+            <span className="text-[#ffffff]">
+              Artificial Intelligence,
+              <br className="sm:block hidden" /> Machine Learning Engineer who
+              builds intelligent applications.
+            </span>
           </p>
           <div className="flex flex-row gap-4 mt-4">
-          {hero.map((item, index) => (
-            <a key={index} href={item.link} target="_blank" rel="noopener noreferrer">
-              <img
-                src={item.img}
-                alt={item.title}
-                className="w-12 object-contain cursor-pointer"
-              />
-            </a>
-          ))}
-        </div>
+            {hero.map((item, index) => (
+              <a
+                key={index}
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={item.title}
+              >
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  width={48}
+                  height={48}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-12 h-12 object-contain cursor-pointer transition-transform duration-200 hover:scale-110"
+                />
+              </a>
+            ))}
+          </div>
         </div>
       </div>
-      
+
       <div className="absolute inset-0 top-20 flex justify-center items-center -z-10 pt-30">
-        <img src={avator} alt="avator" className="w-[750px] opacity-60 object-contain" loading="lazy"/>
+        <img
+          src={avator}
+          alt="avator"
+          className="w-[750px] opacity-60 object-contain"
+          loading="lazy"
+        />
       </div>
-      
+
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
