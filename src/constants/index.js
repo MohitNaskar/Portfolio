@@ -22,7 +22,8 @@ import {
   mcp,
   agentic,
   ds,
-  mlwb
+  mlwb,
+  darren
 } from "../assets";
 
 export const hero = [
@@ -122,6 +123,15 @@ const experiences = [
 ];
 
 const testimonials = [
+  {
+    testimonial:
+      "I’ve worked closely with Mohit on AI/ML initiatives and have consistently seen him take strong ownership of complex problem statements. He approaches work with a solid technical mindset, explores solutions deeply, and delivers with a high level of professionalism. His ability to balance experimentation with execution makes him a dependable contributor in AI/ML projects. I would confidently recommend him for data science or machine learning roles.",
+    name: "Darren Savio Dsouza",
+    designation: "Senior Data Scientist at SAP Labs India",
+    company: "SAP LABS India",
+    image: darren,
+    testimonial_link:"https://www.linkedin.com/in/mohit-naskar-a595201a6/",
+  },
   {
     testimonial:
       "I am writing to wholeheartedly recommend Mohit, who has been an integral part of our search team for the past 8 months . As his colleague, I have had the pleasure of observing Mohit's exceptional work ethic, dedication, and intellectual curiosity.Throughout his time with us, Mohit consistently demonstrated a high level of professionalism and a commendable ability to manage his time effectively. He successfully completed all assigned tasks within the given deadlines. His commitment to meeting project milestones was evident in their detailed planning and efficient execution.In conclusion, I am confident that Mohit will excel in any future academic or professional endeavors they choose to pursue. He have proven himself to be a reliable, dedicated, and insightful scholar who adds significant value to any team. I offer my highest recommendation without reservation.",

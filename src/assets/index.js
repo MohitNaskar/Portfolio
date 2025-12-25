@@ -31,8 +31,10 @@ import gowthami from "./Gowthami.jpeg"
 import avator from "./avator.png"
 import linkedin from "./linkedin.png"
 import leetcode from "./leetcode.png"
+import darren from "./Darren.jpeg"
 
 export {
+  darren,
   mlwb,
   agentic,
   react,
