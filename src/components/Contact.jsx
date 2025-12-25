@@ -5,11 +5,9 @@ import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 import emailjs from "@emailjs/browser";
 import { form } from "framer-motion/client";
-const EarthCanvas = React.lazy(() => import("./canvas/Earth.jsx"));
 import useTailwindDesktop from "../hooks/useTailwindDesktop";
 
 const Contact = () => {
-  const isDesktop = useTailwindDesktop();
   const formRef = useRef();
   const [loading, setLoading] = useState(false);
 
@@ -112,16 +110,6 @@ const Contact = () => {
           </button>
         </form>
       </motion.div>
-      {isDesktop && (
-        <motion.div
-          variants={slideIn("right", "tween", 0.2, 1)}
-          className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
-        >
-          <Suspense fallback={<div className="text-white">Loading 3D...</div>}>
-            <EarthCanvas />
-          </Suspense>
-        </motion.div>
-      )}
     </div>
   );
 };
