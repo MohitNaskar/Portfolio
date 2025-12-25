@@ -14,7 +14,7 @@ const FeedbackCard = ({
   designation,
   company,
   image,
-  testimonial_link
+  testimonial_link,
 }) => (
   <motion.div variants={fadeIn("", "spring", index * 0.5, 0.75)}>
     <div className="p-10 rounded-3xl w-full">
@@ -40,15 +40,15 @@ const FeedbackCard = ({
             className="w-10 h-10 rounded-full object-cover"
           />
           <div
-              onClick={() => window.open(testimonial_link, "_blank")}
-              className="w-12 h-12 rounded-full flex justify-center items-center cursor-pointer"
-            >
-              <img
-                src={rocket}
-                alt="rocket"
-                className="w-1/2 h-1/2 object-contain"
-              />
-            </div>
+            onClick={() => window.open(testimonial_link, "_blank")}
+            className="w-12 h-12 rounded-full flex justify-center items-center cursor-pointer"
+          >
+            <img
+              src={rocket}
+              alt="rocket"
+              className="w-1/2 h-1/2 object-contain"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -58,13 +58,20 @@ const FeedbackCard = ({
 const Feedbacks = () => {
   return (
     <>
-        <motion.div variants={textVariant()}>
-          <p className={styles.sectionSubText}>What others say</p>
-          <div className="space-between">
-            <h2 className={styles.sectionHeadText}>Testimonials.</h2>
-          </div>
-        </motion.div>
-      <div className={`${styles.paddingX} -mt-21 pb-14 flex flex-wrap gap-7`}>
+      <motion.div variants={textVariant()}>
+        <p className={styles.sectionSubText}>What others say</p>
+        <div className="space-between">
+          <h2 className={styles.sectionHeadText}>Testimonials.</h2>
+        </div>
+      </motion.div>
+      <div
+        className={`${styles.paddingX}
+    mt-0 md:-mt-21
+    pb-14
+    flex flex-col
+    sm:flex-row sm:flex-wrap
+    gap-7`}
+      >
         {testimonials.map((testimonial, index) => (
           <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
         ))}
