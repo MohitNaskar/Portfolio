@@ -9,6 +9,7 @@ import Feedbacks from './Feedbacks';
 import Contact from './Contact';
 import Footer from './Footer';
 import CustomCursor from './CustomCursor';
+import OpenAssistance from './OpenAssistance';
 
 export {
   Hero,
@@ -19,7 +20,8 @@ export {
   Works,
   Feedbacks,
   Contact,
-  CustomCursor, 
+  CustomCursor,
   StarsCanvas,
-  Footer
+  Footer,
+  OpenAssistance,
 }

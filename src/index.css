@@ -206,3 +206,223 @@
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
   }
 }
+
+.open-assistance {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.open-assistance-trigger {
+  background: rgba(128, 77, 238, 0.4);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  border: 1px solid rgba(128, 77, 238, 0.6);
+  border-radius: 50%;
+  width: 72px;
+  height: 72px;
+  font-size: 32px;
+  cursor: pointer;
+  pointer-events: auto;
+  box-shadow: 0 4px 20px rgba(128, 77, 238, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.open-assistance-trigger:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(128, 77, 238, 0.7);
+}
+
+.open-assistance-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+.assistance-option-btn {
+  background: #1d1836;
+  color: #fff;
+  border: 1px solid #804dee;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.assistance-option-btn:hover {
+  background: rgba(128, 77, 238, 0.2);
+  transform: translateY(-1px);
+}
+
+/* modal overlay — dims background without covering full screen content */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 120px 32px 32px;
+  pointer-events: none;
+}
+
+.modal-content {
+  pointer-events: auto;
+  width: 360px;
+  background: #151030;
+  border: 1px solid rgba(128, 77, 238, 0.5);
+  border-radius: 20px;
+  box-shadow: 0 8px 40px rgba(128, 77, 238, 0.25);
+  overflow: hidden;
+}
+
+.support-room {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* name entry form */
+.name-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.name-form h2 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #f3f3f3;
+  line-height: 1.4;
+}
+
+.name-form input {
+  background: #1d1836;
+  border: 1px solid rgba(128, 77, 238, 0.4);
+  border-radius: 10px;
+  padding: 10px 14px;
+  color: #f3f3f3;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.name-form input:focus {
+  border-color: #804dee;
+}
+
+.name-form input::placeholder {
+  color: #aaa6c3;
+}
+
+.name-form button[type="submit"] {
+  background: rgba(128, 77, 238, 0.5);
+  color: #fff;
+  border: 1px solid rgba(128, 77, 238, 0.7);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.name-form button[type="submit"]:hover {
+  background: rgba(128, 77, 238, 0.75);
+  transform: translateY(-1px);
+}
+
+.cancel-button {
+  background: transparent;
+  color: #aaa6c3;
+  border: 1px solid rgba(170, 166, 195, 0.3);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.cancel-button:hover {
+  color: #f3f3f3;
+  border-color: rgba(170, 166, 195, 0.6);
+}
+
+/* voice assistant box */
+.voice-assistant-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.visualizer-container {
+  background: #1d1836;
+  border: 1px solid rgba(128, 77, 238, 0.3);
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
+}
+
+.control-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.conversation {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 180px;
+  overflow-y: auto;
+  padding-right: 4px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(128, 77, 238, 0.4) transparent;
+}
+
+.conversation::-webkit-scrollbar {
+  width: 4px;
+}
+
+.conversation::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.conversation::-webkit-scrollbar-thumb {
+  background: rgba(128, 77, 238, 0.4);
+  border-radius: 4px;
+}
+
+.message {
+  background: #1d1836;
+  border: 1px solid rgba(128, 77, 238, 0.2);
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.message-agent {
+  color: #804dee;
+}
+
+.message-user {
+  color: #00cea8;
+}
+
+.message-text {
+  color: #aaa6c3;
+}

@@ -11,6 +11,7 @@ import {
   Works,
   StarsCanvas,
   Footer,
+  OpenAssistance,
 } from "./components";
 
 const App = () => {
@@ -33,6 +34,7 @@ const App = () => {
           <Footer />
         </div>
       </div>
+      <OpenAssistance />
     </BrowserRouter>
   );
 };
