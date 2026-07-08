@@ -14,7 +14,8 @@ const LiveKitModal = ({ setShowSupport }) => {
   const getToken = useCallback(async (userName) => {
     try {
       console.log("run")
-      const response = await fetch("/api/getToken?name=" + encodeURIComponent(userName));
+      const base = import.meta.env.VITE_BACKEND_URL ?? "";
+      const response = await fetch(`${base}/getToken?name=` + encodeURIComponent(userName));
       if (!response.ok) throw new Error("Failed to fetch token");
       const token = await response.text();
       setToken(token);
