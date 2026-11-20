@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 
 const ZOOM   = 1.42;  // magnification factor
-const LENS_R = 92;    // px radius → 124px diameter
+const LENS_R = 62;    // px radius → 124px diameter
 const LENS_D = LENS_R * 2;
 
 // ── Component ───────────────────────────────────────────────────────────────
