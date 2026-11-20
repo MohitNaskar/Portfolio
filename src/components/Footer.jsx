@@ -11,6 +11,12 @@ const Footer = () => {
           <span className="text-muted text-[0.85rem]">
             © {year} Mohit Naskar
           </span>
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="font-mono text-muted text-[0.85rem] tracking-wide hover:text-secondary transition-colors"
+          >
+            ↑ Top
+          </button>
         </div>
 
         <div className="flex items-center gap-6">

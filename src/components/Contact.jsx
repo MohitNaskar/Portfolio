@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import { SectionWrapper } from "../hoc";
 
@@ -30,14 +30,36 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [sent, setSent] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [errors, setErrors] = useState({});
+
+  useEffect(() => {
+    if (!sent) return;
+    const timer = setTimeout(() => setSent(false), 30_000);
+    return () => clearTimeout(timer);
+  }, [sent]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
+    if (errors[name]) setErrors((prev) => ({ ...prev, [name]: "" }));
+  };
+
+  const validate = () => {
+    const e = {};
+    if (!form.name.trim()) e.name = "Name is required.";
+    if (!form.email.trim()) {
+      e.email = "Email is required.";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) {
+      e.email = "Enter a valid email address.";
+    }
+    if (!form.message.trim()) e.message = "Message is required.";
+    return e;
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const errs = validate();
+    if (Object.keys(errs).length) { setErrors(errs); return; }
     setLoading(true);
 
     emailjs
@@ -126,10 +148,10 @@ const Contact = () => {
                   name="name"
                   value={form.name}
                   onChange={handleChange}
-                  required
                   placeholder="Your name"
-                  className="w-full bg-surface border border-border text-text-primary text-[0.875rem] px-4 py-3 placeholder:text-muted focus:outline-none focus:border-accent transition-colors"
+                  className={`w-full bg-surface border text-text-primary text-[0.875rem] px-4 py-3 placeholder:text-muted focus:outline-none transition-colors ${errors.name ? "border-red-500" : "border-border focus:border-accent"}`}
                 />
+                {errors.name && <p className="font-mono text-[0.625rem] text-red-500 mt-1">{errors.name}</p>}
               </div>
               <div>
                 <label
@@ -144,10 +166,10 @@ const Contact = () => {
                   name="email"
                   value={form.email}
                   onChange={handleChange}
-                  required
                   placeholder="your@email.com"
-                  className="w-full bg-surface border border-border text-text-primary text-[0.875rem] px-4 py-3 placeholder:text-muted focus:outline-none focus:border-accent transition-colors"
+                  className={`w-full bg-surface border text-text-primary text-[0.875rem] px-4 py-3 placeholder:text-muted focus:outline-none transition-colors ${errors.email ? "border-red-500" : "border-border focus:border-accent"}`}
                 />
+                {errors.email && <p className="font-mono text-[0.625rem] text-red-500 mt-1">{errors.email}</p>}
               </div>
               <div>
                 <label
@@ -162,10 +184,10 @@ const Contact = () => {
                   rows="5"
                   value={form.message}
                   onChange={handleChange}
-                  required
                   placeholder="What would you like to discuss?"
-                  className="w-full bg-surface border border-border text-text-primary text-[0.875rem] px-4 py-3 placeholder:text-muted focus:outline-none focus:border-accent transition-colors resize-none"
+                  className={`w-full bg-surface border text-text-primary text-[0.875rem] px-4 py-3 placeholder:text-muted focus:outline-none transition-colors resize-none ${errors.message ? "border-red-500" : "border-border focus:border-accent"}`}
                 />
+                {errors.message && <p className="font-mono text-[0.625rem] text-red-500 mt-1">{errors.message}</p>}
               </div>
               <button
                 type="submit"
