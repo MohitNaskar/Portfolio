@@ -122,7 +122,8 @@ const MagnifyLens = () => {
     // pointerType guard keeps touch interactions clean on hybrid devices.
     const onMove = (e) => {
       if (e.pointerType === "touch") return;
-      pos.current = { x: e.clientX, y: e.clientY, visible: true };
+      const overForm = !!e.target.closest("form");
+      pos.current = { x: e.clientX, y: e.clientY, visible: !overForm };
       schedule();
     };
 
