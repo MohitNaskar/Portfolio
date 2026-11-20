@@ -274,6 +274,18 @@ function WelcomeScreen({ onPrompt }) {
       >
         AI-generated responses based on portfolio information.
       </p>
+      <p
+        style={{
+          fontFamily: "monospace",
+          fontSize: "0.625rem",
+          color: "#777",
+          marginTop: "6px",
+          lineHeight: 1.5,
+          fontWeight: 600,
+        }}
+      >
+        ⚠ Runs on free-tier infrastructure — first response may be slow. Please be patient, it works.
+      </p>
     </div>
   );
 }
