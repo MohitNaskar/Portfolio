@@ -551,8 +551,8 @@ function ChatWindow({ onClose, launcherRef }) {
       style={{
         position: "fixed",
         // Desktop: floating panel above launcher
-        bottom: "80px",
-        right: "16px",
+        bottom: "100px",
+        right: "36px",
         width: "clamp(320px, 92vw, 400px)",
         maxHeight: "calc(100dvh - 100px)",
         display: "flex",
@@ -722,8 +722,8 @@ function Launcher({ onClick, isOpen, launcherRef }) {
       aria-expanded={isOpen}
       style={{
         position: "fixed",
-        bottom: "20px",
-        right: "16px",
+        bottom: "40px",
+        right: "36px",
         background: "#1A1A1A",
         border: "1px solid #2A2A2A",
         color: "#BCBCBC",
