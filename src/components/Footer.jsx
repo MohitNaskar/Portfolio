@@ -2,7 +2,7 @@ const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-border">
+    <footer className="border-t border-border relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 py-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div className="flex items-center gap-6">
           <span className="font-mono text-muted text-[0.85rem] tracking-widest">

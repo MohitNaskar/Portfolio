@@ -61,7 +61,7 @@ const Hero = () => {
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-10 left-6 sm:left-10 lg:left-16 hidden sm:block">
+        <div className="absolute bottom-20 left-6 sm:left-10 lg:left-16 hidden sm:block">
           <a href="#experience" className="font-mono text-muted text-[0.6875rem] tracking-[0.15em] uppercase hover:text-secondary transition-colors flex items-center gap-3">
             <span className="w-8 h-px bg-border inline-block" />
             Scroll
