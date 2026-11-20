@@ -1,6 +1,10 @@
 const API_URL = import.meta.env.VITE_CHATBOT_API_URL || "http://localhost:8000";
 const TIMEOUT_MS = 30_000;
 
+export function warmUp() {
+  fetch(`${API_URL}/health`).catch(() => {});
+}
+
 export async function sendMessage(message, sessionId) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);

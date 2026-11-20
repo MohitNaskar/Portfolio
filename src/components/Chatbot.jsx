@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect, useCallback, useId } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { streamMessage } from "../services/chatbotApi";
+import { streamMessage, warmUp } from "../services/chatbotApi";
 
 // ─── constants ──────────────────────────────────────────────────────────────
 
@@ -781,6 +781,9 @@ const Chatbot = () => {
   const launcherRef = useRef(null);
 
   useChatbotStyles();
+
+  // Ping the backend on page load so Render wakes up before the user opens the chat
+  useEffect(() => { warmUp(); }, []);
 
   // Prevent body scroll on mobile when chat is open
   useEffect(() => {
