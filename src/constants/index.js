@@ -23,11 +23,11 @@ export const techCategories = [
   },
   {
     label: "Deep Learning",
-    items: ["PyTorch", "Neural Networks", "Transformers", "CNNs", "Keras"],
+    items: ["PyTorch", "Neural Networks", "Transformers", "CNNs", "Keras", "Hugging Face"],
   },
   {
     label: "LLM Engineering",
-    items: ["RAG", "Agentic AI", "MCP", "LLM Evaluation", "Fine-tuning", "Tool Calling"],
+    items: ["RAG", "Agentic AI", "MCP", "LLM Evaluation", "Fine-tuning", "Tool Calling", "LangChain", "LangGraph", "Vector DB"],
   },
   {
     label: "Data & Analysis",
@@ -48,12 +48,13 @@ export const experiences = [
     date: "May 2025 — Present",
     location: "Bengaluru, India",
     description:
-      "Working on AI/ML solutions for supplier-related business challenges, applying NLP, generative AI, and agentic AI approaches to improve analysis accuracy and business outcomes.",
+      "Developing and delivering AI/ML solutions for enterprise business challenges, leveraging NLP, Generative AI, and agentic AI to improve operational efficiency, analytical accuracy, and decision-making across supplier-related workflows.",
     points: [
-      "Built a topic modelling solution to analyze customer feedback using NLP, increasing topic accuracy by 95%.",
-      "Implemented AI/ML models—including traditional models and GenAI/Agentic AI approaches—capable of resolving supplier-related issues with up to 93% accuracy.",
-      "Collaborating with cross-functional teams including designers and product managers to define requirements and validate solutions.",
-      "Analyzing large datasets to extract insights and patterns that inform decision-making and improve model performance.",
+      "Developed a topic-modelling solution for seller engagement using traditional ML on SAP data, achieving 95% topic accuracy and enabling structured insights from unstructured data.",
+      "Built AI/ML solutions encompassing traditional ML, Generative AI, and agentic AI approaches to address supplier-related business challenges, achieving up to 93% accuracy.",
+      "Collaborated on client-facing AI initiatives for enterprise engagements involving Sree Cement, Tech Mahindra, and KPMG.",
+      "Worked closely with product managers, designers, and engineering teams to translate business requirements into AI-driven solutions, including ARIBA engagement optimisation based on product visit patterns.",
+      "Analysed large-scale datasets to identify patterns, refine model performance, and support data-informed business decisions.",
     ],
   },
   {
@@ -64,12 +65,12 @@ export const experiences = [
     date: "Aug 2024 — May 2025",
     location: "Bengaluru, India",
     description:
-      "Automated business scenarios using the Joule AI platform and built internal tooling to support SAP product teams.",
+      "Built AI-powered internal tools and automated business scenarios using SAP's Joule AI platform, contributing to intelligent workflows and improved employee onboarding experiences.",
     points: [
-      "Automated business scenarios using the Joule AI platform, adding navigational and transactional capabilities specific to SAP AI.",
-      "Built a Keras chatbot model to assist new joiners with common SAP queries, achieving 91% accuracy on a 0.05 learning rate.",
-      "Developed understanding of Business AI and its application across SAP modules.",
-      "Participated in code reviews, expanding version control and collaborative engineering practices.",
+      "Automated business scenarios using SAP's Joule AI platform, extending AI-powered workflows with navigational and transactional capabilities across SAP use cases.",
+      "Developed a Keras-based chatbot for new-joiner onboarding, achieving 91% model accuracy at a 0.05 learning rate to assist with common SAP-related queries.",
+      "Explored and implemented AI capabilities across SAP business modules, developing an understanding of enterprise AI integration and business workflows.",
+      "Participated in code reviews and collaborative development practices, strengthening software engineering, version control, and team-based development workflows.",
     ],
   },
   {
@@ -159,12 +160,20 @@ export const projects = [
 
 export const engineeringNotes = [
   {
-    date: "Coming soon",
-    category: "Machine Learning",
-    title: "Building a Spam Classifier from Scratch",
+    date: "Nov 2026",
+    category: "Deep Learning",
+    title: "Training a 1.5B Parameter GPT from Scratch",
     description:
-      "A walkthrough of building a production-ready spam classifier: data preprocessing, feature engineering, model selection trade-offs, and evaluation methodology.",
-    link: null,
+      "Implementation notes on training a GPT-2 XL-scale language model — architecture decisions, tokenisation, gradient checkpointing, and what breaks at 1.5B parameters that works fine at smaller scale.",
+    link: "https://github.com/MohitNaskar/GPT1.5BIL",
+  },
+  {
+    date: "Nov 2026",
+    category: "Applied AI",
+    title: "Building a Real-Time Voice Assistant with LiveKit",
+    description:
+      "How I wired together LiveKit's WebRTC transport, speech-to-text, an LLM inference step, and text-to-speech into a low-latency voice assistant — latency budget, turn detection, and the edge cases that matter.",
+    link: "https://github.com/MohitNaskar/VoiceAssistant",
   },
   {
     date: "Coming soon",
@@ -175,12 +184,28 @@ export const engineeringNotes = [
     link: null,
   },
   {
-    date: "Coming soon",
+    date: "Nov 2026",
+    category: "LLM Engineering",
+    title: "Building LLM Chains with LangChain",
+    description:
+      "A practical look at LangChain's abstractions — chains, retrievers, memory, and output parsers — where they help, where they add friction, and patterns that hold up in production.",
+    link: "https://github.com/MohitNaskar/LangchainFundamentals",
+  },
+  {
+    date: "Nov 2026",
+    category: "Agentic AI",
+    title: "Stateful Agent Workflows with LangGraph",
+    description:
+      "Using LangGraph to build multi-step agentic systems where state needs to persist across nodes — graph construction, conditional edges, human-in-the-loop checkpoints, and debugging cycles.",
+    link: "https://github.com/MohitNaskar/LangGraph_Fundamentals",
+  },
+  {
+    date: "Nov 2026",
     category: "Deep Learning",
     title: "Understanding Transformers Through Implementation",
     description:
       "Working through the transformer architecture by implementing it from scratch in PyTorch—attention mechanisms, positional encodings, and training dynamics.",
-    link: null,
+    link: "https://github.com/MohitNaskar/NANOGPT10M",
   },
   {
     date: "Coming soon",

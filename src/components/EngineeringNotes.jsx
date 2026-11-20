@@ -36,7 +36,7 @@ const NoteEntry = ({ note, index }) => {
               rel="noopener noreferrer"
               className="font-mono text-secondary text-[0.75rem] tracking-wide hover:text-accent transition-colors"
             >
-              Read note ↗
+              GitHub ↗
             </a>
           ) : (
             <span className="font-mono text-muted text-[0.6875rem] tracking-wide">
@@ -65,14 +65,29 @@ const EngineeringNotes = () => {
         </p>
       </div>
 
-      <div>
-        {engineeringNotes.map((note, index) => (
-          <NoteEntry key={index} note={note} index={index} />
-        ))}
+      <div className="relative">
+        {/* Scrollable list — shows ~3 entries, scroll for the rest */}
+        <div
+          className="max-h-[560px] overflow-y-auto pr-1"
+          style={{ scrollbarWidth: "thin", scrollbarColor: "var(--color-border) transparent" }}
+        >
+          {engineeringNotes.map((note, index) => (
+            <NoteEntry key={index} note={note} index={index} />
+          ))}
+          <div className="border-t border-border" />
+        </div>
+
+        {/* Fade hint at the bottom */}
+        <div
+          className="absolute bottom-0 left-0 right-0 h-20 pointer-events-none"
+          style={{ background: "linear-gradient(to top, var(--color-bg), transparent)" }}
+        />
       </div>
 
-      {/* Final separator */}
-      <div className="border-t border-border mt-0" />
+      <p className="font-mono text-muted text-[0.6875rem] tracking-wide mt-3">
+        scroll to see all {engineeringNotes.length} notes ↑↓
+      </p>
+
       <ScrollIndicator href="#stack" />
     </div>
   );

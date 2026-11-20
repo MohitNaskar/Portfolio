@@ -33,6 +33,12 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", checkSection);
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => setMenuOpen(false);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const handleNavClick = (id) => {
     setActive(id);
     setMenuOpen(false);
