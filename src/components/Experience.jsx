@@ -1,57 +1,78 @@
-import { VerticalTimeline,VerticalTimelineElement } from "react-vertical-timeline-component"
-import { motion } from "framer-motion"
-import "react-vertical-timeline-component/style.min.css"
-import { styles } from "../styles"
-import { experiences } from "../constants"
-import { SectionWrapper } from "../hoc"
-import { textVariant } from "../utils/motion"
+import { SectionWrapper } from "../hoc";
+import { experiences } from "../constants";
+import ScrollIndicator from "./ScrollIndicator";
 
-const ExperienceCard = ({experience}) => (
-  <VerticalTimelineElement
-    contentStyle={{background:"transparent",color:"#fff"}}
-    contentArrowStyle={{borderRight:"7px solid #232631"}}
-    date={experience.date}
-    iconStyle={{background:experience.iconBg}}
-    icon={
-      <div className="flex justify-center items-center w-full h-full">
-        <img 
-          src={experience.icon}
-          alt={experience.company_name}
-          className="w-[60%] h-[60%] object-contain"
-        />
+const ExperienceEntry = ({ experience, index }) => {
+  const num = String(index + 1).padStart(2, "0");
+
+  return (
+    <article className="border-t border-border pt-10 pb-10 sm:pb-14">
+      <div className="flex flex-col lg:flex-row gap-6 lg:gap-14">
+        {/* Left: company + meta */}
+        <div className="lg:w-[280px] flex-shrink-0">
+          <div className="flex items-center gap-3 mb-4">
+            <span className="font-mono text-muted text-[0.6875rem] tracking-widest">{num}</span>
+            <img
+              src={experience.icon}
+              alt={experience.company_name}
+              className="w-6 h-6 object-contain rounded-sm opacity-80"
+            />
+          </div>
+          <p className="text-text-primary font-semibold text-[1rem] mb-1">
+            {experience.company_name}
+          </p>
+          <p className="font-mono text-muted text-[0.75rem] tracking-wide mb-1">
+            {experience.date}
+          </p>
+          {experience.location && (
+            <p className="font-mono text-muted text-[0.6875rem] tracking-wide">
+              {experience.location}
+            </p>
+          )}
+        </div>
+
+        {/* Right: role + details */}
+        <div className="flex-1">
+          <h3 className="text-text-primary font-bold text-[1.25rem] sm:text-[1.5rem] leading-tight tracking-tight mb-3">
+            {experience.title}
+          </h3>
+          <p className="text-secondary text-[0.9375rem] leading-relaxed mb-6">
+            {experience.description}
+          </p>
+          <ul className="space-y-3">
+            {experience.points.map((point, i) => (
+              <li key={i} className="flex gap-3 text-secondary text-[0.875rem] leading-relaxed">
+                <span className="font-mono text-border mt-1.5 text-[0.5rem]">◆</span>
+                <span>{point}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
-    }
-  >
-    <div>
-      <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
-      <p className="text-secondary text-[16px] font-semibold" style={{margin:0}}>{experience.company_name}</p>
-    </div>
-    <ul className="mt-5 list-disc ml-5 space-y-2">
-      {experience.points.map((point,index) => (
-        <li
-          key={index}
-          className="text-white-100 text-[14px] pl-1 tracking-wider"
-        >
-          {point}
-        </li>
-      ))}
-    </ul>
-  </VerticalTimelineElement>
-)
+    </article>
+  );
+};
+
 const Experience = () => {
   return (
-    <><motion.div variants={textVariant()}>
-      <p className={styles.sectionSubText}>What I have done so far</p>
-      <h2 className={styles.sectionHeadText}>Work Experience.</h2>
-    </motion.div>
-    <div className="mt-20 flex flex-col">
-      <VerticalTimeline>
-        {experiences.map((experience,index) => (
-          <ExperienceCard key={index} experience={experience}/>
-        ))}
-      </VerticalTimeline>
-    </div></>
-  )
-}
+    <div>
+      <div className="mb-12">
+        <p className="font-mono text-muted text-[0.6875rem] tracking-[0.2em] uppercase mb-3">
+          Professional
+        </p>
+        <h2 className="text-text-primary font-bold text-[1.75rem] sm:text-[2.25rem] lg:text-[2.75rem] leading-tight tracking-tight">
+          Experience
+        </h2>
+      </div>
 
-export default  SectionWrapper(Experience, "work")
+      <div>
+        {experiences.map((exp, index) => (
+          <ExperienceEntry key={index} experience={exp} index={index} />
+        ))}
+      </div>
+      <ScrollIndicator href="#work" />
+    </div>
+  );
+};
+
+export default SectionWrapper(Experience, "experience");

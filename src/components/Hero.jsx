@@ -1,78 +1,72 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { styles } from "../styles";
-import { avator } from "../assets";
-import { hero } from "../constants";
-
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen mx-auto">
-      <div
-        className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}
-      >
-        <div className="flex flex-col justify-center items-center mt-5">
-          <div className="w-5 h-5 rounded-full bg-[#915eff]" />
-          <div className="w-1 sm:h-80 h-40 violet-gradient" />
-        </div>
-        <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className="text-[#915eff]">Mohit</span>
-          </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100 w-80`}>
-            I am an{" "}
-            <span className="text-[#ffffff]">
-              Artificial Intelligence,
-              <br className="sm:block hidden" /> Machine Learning Engineer who
-              builds intelligent applications.
-            </span>
-          </p>
-          <div className="flex flex-row gap-4 mt-4">
-            {hero.map((item, index) => (
-              <a
-                key={index}
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={item.title}
-              >
-                <img
-                  src={item.img}
-                  alt={item.title}
-                  width={48}
-                  height={48}
-                  loading="lazy"
-                  decoding="async"
-                  className="w-12 h-12 object-contain cursor-pointer transition-transform duration-200 hover:scale-110"
-                />
-              </a>
-            ))}
-          </div>
-        </div>
-      </div>
+    <section className="relative w-full min-h-screen flex items-center" aria-label="Introduction">
+      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 w-full pt-24 pb-20 sm:pt-32 sm:pb-28">
+        {/* Monospace label */}
+        <p className="font-mono text-muted text-[0.6875rem] tracking-[0.2em] uppercase mb-6">
+          AI/ML Engineer — Bengaluru, India
+        </p>
 
-      <div className="absolute inset-0 top-20 flex justify-center items-center -z-10 pt-30">
-        <img
-          src={avator}
-          alt="avator"
-          className="w-[750px] opacity-60 object-contain"
-          loading="lazy"
-        />
-      </div>
+        {/* Main heading */}
+        <h1 className="font-bold text-text-primary leading-[1.05] tracking-tight mb-6 text-[2.5rem] sm:text-[3.75rem] lg:text-[5rem] xl:text-[6rem] max-w-5xl">
+          I build and experiment
+          <br />
+          with intelligent systems.
+        </h1>
 
-      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
-        <a href="#about">
-          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
-            <motion.div
-              animate={{ y: [0, 24, 0] }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                repeatType: "loop",
-              }}
-              className="w-3 h-3 rounded-full bg-secondary mb-1"
-            />
-          </div>
-        </a>
+        {/* Sub description */}
+        <p className="text-secondary text-[1rem] sm:text-[1.125rem] leading-relaxed font-light max-w-2xl mb-4">
+          Working across machine learning, LLM applications, retrieval systems
+          and AI engineering.
+        </p>
+
+        {/* Meta line */}
+        <p className="font-mono text-muted text-[0.75rem] tracking-wide mb-10">
+          Currently at{" "}
+          <span className="text-accent">SAP Labs India</span>
+        </p>
+
+        {/* CTA Links */}
+        <div className="flex flex-wrap items-center gap-4 sm:gap-6">
+          <a
+            href="#work"
+            className="inline-flex items-center gap-2 text-text-primary text-[0.875rem] font-medium border border-border px-5 py-2.5 hover:border-accent hover:text-accent transition-colors"
+          >
+            View Projects
+          </a>
+          <a
+            href="https://drive.google.com/file/d/1mW6hDFfBNT2w-UBxnvdv9bN3mDIqS26E/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-secondary text-[0.875rem] font-mono hover:text-text-primary transition-colors"
+          >
+            Resume ↗
+          </a>
+          <a
+            href="https://github.com/MohitNaskar"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-secondary text-[0.875rem] font-mono hover:text-text-primary transition-colors"
+          >
+            GitHub ↗
+          </a>
+          <a
+            href="https://www.linkedin.com/in/mohit-naskar-a595201a6/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-secondary text-[0.875rem] font-mono hover:text-text-primary transition-colors"
+          >
+            LinkedIn ↗
+          </a>
+        </div>
+
+        {/* Scroll indicator */}
+        <div className="absolute bottom-10 left-6 sm:left-10 lg:left-16 hidden sm:block">
+          <a href="#experience" className="font-mono text-muted text-[0.6875rem] tracking-[0.15em] uppercase hover:text-secondary transition-colors flex items-center gap-3">
+            <span className="w-8 h-px bg-border inline-block" />
+            Scroll
+          </a>
+        </div>
       </div>
     </section>
   );

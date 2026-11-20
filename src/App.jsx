@@ -1,40 +1,57 @@
 import { BrowserRouter } from "react-router-dom";
 import {
-  CustomCursor,
   About,
   Contact,
   Experience,
-  Feedbacks,
   Hero,
   Navbar,
   Tech,
   Works,
-  StarsCanvas,
   Footer,
-  OpenAssistance,
+  EngineeringNotes,
+  Testimonials,
 } from "./components";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="relative z-0 bg-primary h-screen overflow-y-scroll overflow-x-hidden smooth-scroll">
-        <div className="relative z-0">
-          <CustomCursor />
-          <div className="fixed inset-0 -z-10">
-            <StarsCanvas />
-          </div>
-          <Navbar />
+      <div className="bg-primary min-h-screen">
+        <Navbar />
+        <main>
+          {/* Dark */}
           <Hero />
-          <About />
-          <Experience />
-          <Tech />
+
+          {/* Light */}
+          <div className="section-light bg-primary">
+            <Experience />
+          </div>
+
+          {/* Dark */}
           <Works />
-          <Feedbacks />
-          <Contact />
-          <Footer />
-        </div>
+
+          {/* Light */}
+          <div className="section-light bg-primary">
+            <EngineeringNotes />
+          </div>
+
+          {/* Dark */}
+          <Tech />
+
+          {/* Light */}
+          <div className="section-light bg-primary">
+            <About />
+          </div>
+
+          {/* Dark */}
+          <Testimonials />
+
+          {/* Light */}
+          <div className="section-light bg-primary">
+            <Contact />
+          </div>
+        </main>
+        <Footer />
       </div>
-      <OpenAssistance />
     </BrowserRouter>
   );
 };
