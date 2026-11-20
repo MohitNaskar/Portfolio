@@ -11,6 +11,7 @@ import {
   EngineeringNotes,
   Testimonials,
 } from "./components";
+import MagnifyLens  from "./components/MagnifyLens";
 
 const App = () => {
   return (
@@ -51,6 +52,7 @@ const App = () => {
           </div>
         </main>
         <Footer />
+        <MagnifyLens />
       </div>
     </BrowserRouter>
   );
