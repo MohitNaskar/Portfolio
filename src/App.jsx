@@ -12,6 +12,7 @@ import {
   Testimonials,
 } from "./components";
 import MagnifyLens  from "./components/MagnifyLens";
+import Chatbot from "./components/Chatbot";
 
 const App = () => {
   return (
@@ -53,6 +54,7 @@ const App = () => {
         </main>
         <Footer />
         <MagnifyLens />
+        <Chatbot />
       </div>
     </BrowserRouter>
   );
