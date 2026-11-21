@@ -1,7 +1,7 @@
 import {
   sap,
   ineuron,
-  movie_recommender,
+  gpt15b,
   emailspam,
   banking_system,
   gowthami,
@@ -113,19 +113,20 @@ export const testimonials = [
 
 export const projects = [
   {
-    name: "Movie Recommendation System",
-    category: "Machine Learning · NLP",
+    name: "GPT-1.5 Billion Model",
+    category: "Deep Learning · LLM",
     description:
-      "A content-based and collaborative filtering recommendation system using NLP and Pearson Correlation to suggest movies based on user input and viewing patterns.",
+      "A 1.5B-parameter GPT model designed to be compiled and run locally, enabling private AI assistance, data analysis, and intelligent workflows without sending sensitive data to cloud-based models.",
     tags: [
       { name: "Python" },
+      { name: "PyTorch" },
+      { name: "Transformers" },
+      { name: "Deep Learning" },
       { name: "NLP" },
-      { name: "Pearson Correlation" },
-      { name: "Streamlit" },
     ],
-    image: movie_recommender,
-    source_code_link: "https://github.com/MohitNaskar/movie_recommender",
-    live_demo_link: "https://movierecommender-ge7zcwnknapdue4zxtqjrk.streamlit.app/",
+    image: gpt15b,
+    source_code_link: "https://github.com/MohitNaskar/GPT1.5BIL",
+    live_demo_link: null,
   },
   {
     name: "Email Spam Classifier",
