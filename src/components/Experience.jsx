@@ -14,7 +14,7 @@ const ExperienceEntry = ({ experience, index }) => {
             <span className="font-mono text-muted text-[0.6875rem] tracking-widest">{num}</span>
             <img
               src={experience.icon}
-              alt={experience.company_name}
+              alt={`${experience.company_name} logo`}
               className="w-6 h-6 object-contain rounded-sm opacity-80"
             />
           </div>

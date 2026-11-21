@@ -23,8 +23,10 @@ const ProjectCard = ({ index, project }) => {
           >
             <img
               src={project.image}
-              alt={project.name}
+              alt={`${project.name} — ${project.category} project screenshot`}
               loading="lazy"
+              width="800"
+              height="450"
               className="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-[1.02]"
             />
           </a>
