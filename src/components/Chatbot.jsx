@@ -713,7 +713,7 @@ function ChatWindow({ onClose, launcherRef }) {
 
 // ─── Launcher button ──────────────────────────────────────────────────────────
 
-function Launcher({ onClick, isOpen, launcherRef }) {
+function Launcher({ onClick, isOpen, launcherRef, bottom }) {
   return (
     <button
       ref={launcherRef}
@@ -722,7 +722,7 @@ function Launcher({ onClick, isOpen, launcherRef }) {
       aria-expanded={isOpen}
       style={{
         position: "fixed",
-        bottom: "40px",
+        bottom: bottom ?? "40px",
         right: "36px",
         background: "#1A1A1A",
         border: "1px solid #2A2A2A",
@@ -733,7 +733,7 @@ function Launcher({ onClick, isOpen, launcherRef }) {
         padding: "10px 16px",
         cursor: "pointer",
         zIndex: 9998,
-        transition: "border-color 0.15s, color 0.15s",
+        transition: "border-color 0.15s, color 0.15s, bottom 0.2s ease",
         display: "flex",
         alignItems: "center",
         gap: "6px",
@@ -790,12 +790,32 @@ function useChatbotStyles() {
 
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [launcherBottom, setLauncherBottom] = useState("40px");
   const launcherRef = useRef(null);
 
   useChatbotStyles();
 
-  // Ping the backend on page load so Render wakes up before the user opens the chat
   useEffect(() => { warmUp(); }, []);
+
+  // On mobile, lift the button above the footer when it scrolls into view
+  useEffect(() => {
+    const isMobile = () => window.innerWidth < 640;
+    const update = () => {
+      if (!isMobile()) { setLauncherBottom("40px"); return; }
+      const footer = document.querySelector("footer");
+      if (!footer) return;
+      const rect = footer.getBoundingClientRect();
+      const overlap = window.innerHeight - rect.top;
+      setLauncherBottom(overlap > 0 ? `${overlap + 12}px` : "40px");
+    };
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update, { passive: true });
+    update();
+    return () => {
+      window.removeEventListener("scroll", update);
+      window.removeEventListener("resize", update);
+    };
+  }, []);
 
   // Prevent body scroll on mobile when chat is open
   useEffect(() => {
@@ -810,6 +830,7 @@ const Chatbot = () => {
         onClick={() => setIsOpen((v) => !v)}
         isOpen={isOpen}
         launcherRef={launcherRef}
+        bottom={launcherBottom}
       />
       {isOpen && (
         <ChatWindow
