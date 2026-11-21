@@ -17,7 +17,7 @@ const About = () => {
         {/* Main bio */}
         <div className="space-y-5">
           <p className="text-secondary text-[0.9375rem] leading-relaxed">
-            I'm an AI/ML engineer based in Bengaluru, India, currently working at SAP Labs India.
+            I'm an AI/ML engineer and Gen AI developer based in Bengaluru, India, currently working at SAP Labs India.
             My work sits at the intersection of machine learning, language models, and production
             engineering — building systems that are reliable, interpretable, and genuinely useful.
           </p>
@@ -38,7 +38,7 @@ const About = () => {
             <p className="font-mono text-muted text-[0.6875rem] tracking-[0.15em] uppercase mb-3">
               Currently
             </p>
-            <p className="text-text-primary text-[0.9375rem]">AI/ML Developer Associate</p>
+            <p className="text-text-primary text-[0.9375rem]">AI/ML Developer Associate · Gen AI Developer</p>
             <p className="text-secondary text-[0.875rem]">SAP Labs India, Bengaluru</p>
           </div>
 
@@ -49,6 +49,7 @@ const About = () => {
             <ul className="space-y-1.5">
               {[
                 "Machine Learning & Deep Learning",
+                "Generative AI Development",
                 "LLM Engineering & RAG",
                 "Agentic AI Systems",
                 "NLP & Text Processing",

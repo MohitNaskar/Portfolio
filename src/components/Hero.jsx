@@ -4,7 +4,7 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 w-full pt-24 pb-20 sm:pt-32 sm:pb-28">
         {/* Monospace label */}
         <p className="font-mono text-muted text-[0.6875rem] tracking-[0.2em] uppercase mb-6">
-          AI/ML Engineer — Bengaluru, India
+          AI/ML Engineer · Gen AI Developer — Bengaluru, India
         </p>
 
         {/* Main heading */}
